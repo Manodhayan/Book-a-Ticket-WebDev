@@ -1,6 +1,9 @@
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0px;
+  font: 14px "Segoe UI";
+  margin: 0px;
+  display: inline;
 }
 
 a {
@@ -9,10 +12,18 @@ a {
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 95%;
 }
-
-td, th {
+th{
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+  color: white;
+  font-family: 'Segoe UI';
+  background: black;
+  
+}
+td {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -20,4 +31,37 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  height: 70px;
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI';
+  width: 100%;
+  opacity: 0.80;
+  position: fixed;
+  z-index: 50;
+  text-align: center;
+}
+
+
+.Tablediv{
+  margin:30px;
+  margin-top: 150px;
+  position: absolute;
+  width: 100%;
+}
+
+.bottomBar {
+  height: 60px;
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI';
+  width: 100%;
+  opacity: 0.80;
+  bottom: 0;
+  z-index: 50;
+  position: absolute;
+  text-align: center
 }
