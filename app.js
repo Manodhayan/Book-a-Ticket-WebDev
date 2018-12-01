@@ -14,13 +14,31 @@ var trains=[
 
 ]
 
+// router.get('/',function(req,res,next){
+//   res.render('index',{title:'Express'});
+// });
 router.get('/',function(req,res,next){
-  res.render('index',{title:'Express'});
+  res.render('train',{count:trains.length,trains:trains});
 });
 
 router.get('/train',function(req,res,next){
   res.render('train',{count:trains.length,trains:trains});
 });
+router.post('/',function(req,res,next){
+  console.log(Object.keys(req.body)[0]);
+  check=Object.keys(req.body)[0];
+  for (train in trains)
+  {
+    if (trains[train].name==check)
+    {
+      console.log(trains[train].name);
+      trains[train].AvailableSeats-=1;
+    }
+  }
+  res.render('train',{count:trains.length,trains:trains});
+});
+
+
 router.post('/train',function(req,res,next){
   console.log(Object.keys(req.body)[0]);
   check=Object.keys(req.body)[0];
@@ -39,7 +57,6 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

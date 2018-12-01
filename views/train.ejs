@@ -8,10 +8,17 @@
       <div class="topnav">
           <H1 class="headText">Train Ticket Booking</H1>
         </div>
-        
+        <div class="location"><b style="padding:20px">From</b>
+          <input type="text" id="fname" name="firstname" placeholder="Coimbatore">
+          <b style="padding:20px">To</b><input type="text" id="fname" name="firstname" placeholder="Chennai">
+          <b style="padding:20px">Class</b><input type="text" id="fname" name="firstname" placeholder="AC">
+          <b style="padding:20px">On</b><input type="date" id="fname" value="2018-12-02" name="firstname">
+          
+        </div>
       <div class="Tablediv">
         
       <form method="POST">
+          <br>
       <table >
           <tr>
           <th>Trains</th>
@@ -21,10 +28,10 @@
         </tr>
         <% for (train of trains){ %>
             <tr>
-            <td><%=train.name %></td>
+            <td><b><%=train.name %></b></td>
             <td><%=train.TotalSeats %></td>
             <td><%=train.AvailableSeats %></td>
-            <td><input type="submit" name=<%=train.name %> value="Book!"></td>
+            <td><button type="submit" class="button" name=<%=train.name %>><span>Book </span></button></button></td>
         </tr>
         <% } %>
           <!-- <tr><td>Chennai Express</td>
@@ -35,7 +42,6 @@
 
       </table>
     </form>
-
   </div>
   <div class="bottomBar"><p>Copyright© 2018. All rights reserved</p></div>
   </body>
