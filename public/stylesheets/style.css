@@ -3,6 +3,7 @@ body {
   padding: 0px;
   font: 14px "Segoe UI";
   margin: 0px;
+  overflow-x: hidden;
   display: inline;
 }
 
@@ -50,8 +51,9 @@ tr:nth-child(even) {
 .Tablediv{
   margin:30px;
   margin-top: 200px;
-  position: absolute;
-  width: 100%;
+  position: relative;
+  width:100%;
+  overflow-x: hidden;
 }
 
 .bottomBar {
